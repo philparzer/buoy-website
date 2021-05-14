@@ -1,0 +1,80 @@
+:root {
+    --yellow: #DBDB93;
+    --red: #DBA993;
+    --white: #FAFAFA;
+    --primaryGrey: #474747;
+    --darkerGrey: #3F3F3F;
+    --lighterGrey:  #707070;
+}
+
+* {
+    font-family: Bahnschrift;
+    color: var(--lighterGrey);
+    letter-spacing: -.07em;
+}
+
+
+#text-div-1{
+    padding: 0;
+    margin-bottom: -100px;
+
+}
+
+#text-div-2{
+    margin-top: -90px;
+    padding: 0;
+}
+
+#title-div{
+    margin-left: -30px;
+    padding-top: 50px;
+    margin-bottom: -50px;
+}
+
+
+#logo{
+    padding-left: 100px;
+    padding-top:80px;
+}
+
+#background-main{
+    background-color: var(--primaryGrey);
+}
+
+
+#personal-link:hover{
+    color:var(--red);
+}
+
+#personal-link{
+    font-family: Bahnschrift;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#titleElement{
+    font-size: 4em;
+    font-family: Bahnschrift SemiBold;
+    color: var(--yellow);
+    letter-spacing: -35px;
+}
+
+.text-intro{
+    font-size: 4.5em;
+}
+
+body,html{
+    margin:0;
+    width:100%;
+  }
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primaryGrey);
+}
+
+
+#background {
+    background-color: var(--primaryGrey);
+}
