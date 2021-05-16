@@ -47,11 +47,11 @@
 }
 
 
-#personal-link:hover{
+.personal-link:hover{
     color:var(--red);
 }
 
-#personal-link{
+.personal-link{
     font-family: Bahnschrift;
     color: var(--white);
     text-decoration: none;
