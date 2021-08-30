@@ -20,7 +20,7 @@ const TIMESTAMPS = [
     {time:1650, text:"If you do get distracted"},
     {time:2100, text:"You have 10s to get back on track"}, 
     {time:3350, text:"Stay focused until, eventually, time's up"},
-    {time:2950, text:"But there's more: check your stats, search for tags"},
+    {time:2950, text:"But there's more: check your stats, search for tags"},//TODO: change text maybe remove Stay afloat
     {time:3000, text:"Stay afloat."}
 ]
 
