@@ -1,4 +1,4 @@
-const r = new rive.Rive({
+const SHOWCASE_ANIM = new rive.Rive({
                 
     src: 'https://public.rive.app/community/runtime-files/831-1627-buoy.riv',
     canvas: document.getElementById('canvas'),
@@ -23,32 +23,31 @@ const TIMESTAMPS = [
     {time:2950, text:"But there's more: check your stats, search for tags"},
     {time:3000, text:"Stay afloat."}
 ]
-const FINALITERATION = TIMESTAMPS.length;
-const canvas = document.getElementById("canvas");
-const text = document.getElementById("timestamp");
-const nextStepBtn = document.getElementById("next-step");
+
+const SHOWCASE_INFO = document.getElementById("timestamp");
+const NEXT_STEP_BTN = document.getElementById("next-step");
 
 function next() {
 
-    if (!r.isPlaying && iterations < FINALITERATION)
+    if (!SHOWCASE_ANIM.isPlaying && iterations < TIMESTAMPS.length)
     {
-        text.textContent = TIMESTAMPS[iterations].text
-        r.play()
-        nextStepBtn.disabled = true;
-        setTimeout(() => {r.pause(); iterations++; nextStepBtn.disabled = false}, TIMESTAMPS[iterations].time)
+        SHOWCASE_INFO.textContent = TIMESTAMPS[iterations].text
+        SHOWCASE_ANIM.play()
+        NEXT_STEP_BTN.disabled = true;
+        setTimeout(() => {SHOWCASE_ANIM.pause(); iterations++; NEXT_STEP_BTN.disabled = false}, TIMESTAMPS[iterations].time)
     }
 
-    else if (iterations >= FINALITERATION)
+    else if (iterations >= TIMESTAMPS.length)
     {
         console.log("finished")
-        r.scrub("showcase", .5)
-        r.play()
+        SHOWCASE_ANIM.scrub("showcase", .5)
+        SHOWCASE_ANIM.play()
         iterations = 0;
-        text.textContent = TIMESTAMPS[deltaSteps[iterations]]
-        setTimeout(() => {r.pause(); iterations++}, deltaSteps[iterations])
+        SHOWCASE_INFO.textContent = TIMESTAMPS[iterations].text
+        setTimeout(() => {SHOWCASE_ANIM.pause(); iterations++; NEXT_STEP_BTN.disabled = false}, TIMESTAMPS[iterations].time)
     }
     
 }
 
-r.scrub("showcase", .5)
+SHOWCASE_ANIM.scrub("showcase", .5)
 
