@@ -50,8 +50,6 @@ var timeStampArr = [];
 
 //check platform
 var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
-// var isMacLike = navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)?true:false; TODO: test if needed
-// var isIOS = navigator.platform.match(/(iPhone|iPod|iPad)/i)?true:false;
 
 if (isMac) {
     animationToPlay = "showcaseMAC";
