@@ -5,7 +5,7 @@
         <title>buoy</title>
         <meta encode="utf-8"/>
         <link rel="icon" href="images/icon.ico"> <!--TODO: Update higher res-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale"/>
         <!--CSS-->
         <link href="styles.css" rel = "stylesheet">
         <!--BOOTSTRAP-->
@@ -14,53 +14,84 @@
     </head>
 
     <body>
-        <div id="background-wrapper" class="container-fluid">
-            <div class="row sticky-top">
-                <div class="col-1 border"></div>
-                <div class="col-3 border">
-                    <div class="row mt-2">
-                        <div class="col-9 border">
-                            <div class="row">
-                                
-                            </div>
-                        </div>
-                        <div class="col-3 border"><a href="#"><img src="images\buoy_icon_v2_1024.png" width="100%" alt=""></a></div>
+        <div id="background">
+
+        <div class="container-fluid ">
+            <div class="row">
+                <iv class="col-12 d-lg-none text-center py-5 d-lg-block">
+                    <img src="images/buoy_icon_v2_1024.png" width="400px" height="400px">
+                </div>
+            </div>
+        </div>
+            
+
+            <div id="background-main" class="container-fluid">
+                <div class="row m-0 p-0">
+                    <div id="text-div-1" class="col-12 text-intro">
+                        
                     </div>
                 </div>
-                <div class="col-6 border"></div>
-                <div class="col-2 border"></div>
-            </div>
-            
-            <div class="row align-items-center mt-4">
-                <div class="col-2 border"></div>
-                <div class="col-7 border">
-                    <canvas id="animation-canvas" width="1096" height="800"></canvas> 
+                
+                <div class="row m-0 p-0">
+                    <div id="title-div" class="col-3 text-intro d-none d-lg-block">
+                        <h1 id="titleElement" class="">buoy</h1>
+                    </div>
+                    <div id="logo" class="col-6 d-none d-lg-block">
+                        
+                    </div>
+                    <div class="col-3  text-intro"></div>
                 </div>
-                <div class="col border">
-                    <a id="next-step" onClick="next()">
-                        <svg id="play-arrow-wrapper" width="73" height="127" viewBox="0 0 73 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="next-arrow" class="" d="M13 13L60 63.5L13 114" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path id="replay-arrow" class="d-none" d="M60 114L13 63.5L60 13" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+
+                <div class="row m-0 p-0">
+                    <div id="text-div-2" class="col-12 text-intro d-none d-lg-block">
+                        <span id="highlight-black">out soon-ish</span>
+                    </div>
                 </div>
-                <div class="col-2 border">
-                    
-                </div>
+
             </div>
 
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-7"><div id="timestamp-wrapper" class="text-end"><span id="timestamp"></span></div>
-                <div class="col"></div>
-                <div class="col-2 "></div>
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-12 text-center text-intro">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center text-intro">
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center text-intro">
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        
+            <div class="container-fluid fixed-bottom">
+                <div class="row">
+                    <div class="col-12 text-center">
+                         <a id="link" href="test.html">under construction</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <a class="personal-link" target="_blank" href="https://www.philippparzer.com">©PhilippParzer</a>
+                        <span>&nbsp|&nbsp</span>
+                        <a class="personal-link" target="_blank" href="https://twitter.com/buoy_app">Twitter</a>
+
+                    </div>
+                </div>
             </div>
         </div>
 
+
         <!--JS-->
-        <script src="https://unpkg.com/rive-js"></script>
-        <script src="timestamps.js"></script>
-        <script src="showcase.js"></script>
-        
+        <script src="main.js"></script>
     </body>
 </html>
