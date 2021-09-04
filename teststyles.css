@@ -121,12 +121,11 @@ a {
 
 #win{
     padding-top: 4%;
-    width: 80%;
+    width: 70%;
 }
 
-#mac{
-    
-    width: 70%;
+#mac{ 
+    width: 63%;
 }
 
 .doc-language{
