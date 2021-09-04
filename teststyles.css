@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-
+/*current media query 2560x1440 TODO:queries*/
 
 :root{
     --yellow: #DBDB93;
@@ -10,8 +10,13 @@
     --primaryGrey: #474747;
     --darkerGrey: #3F3F3F;
     --lighterGrey:  #707070;
+    --backdropGrey: #323232;
 }
 
+a { 
+    color: inherit!important;
+    text-decoration: inherit!important; 
+} 
 
 #background-wrapper{
     position: absolute;
@@ -28,14 +33,32 @@
 
 #animation-canvas{ 
     width: 90%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1.25em 2em;
     border-radius: 1.4em;
 }
 
-#logo{
-    background-color: var(--darkerGrey);
-    color: var(--yellow);
+
+#logo-container{
+    background-color: var(--backdropGrey)!important;
+    border-radius: 4em 0 0 4em;
 }
+
+#buoy-logo-img{
+    margin-left: -4em;
+}
+
+#logotype{
+    position: absolute;
+    font-size: 7.3em;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: var(--yellow);
+    letter-spacing: -.13em;
+    margin-left: .1em;
+    padding: 0px;
+    bottom: 0.05em;
+}
+
 
 #timestamp-wrapper{
     width:90%;
@@ -49,5 +72,79 @@
     
 }
 
+.language-links{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: .99em;
+    color: var(--white);
+    padding: .1em;
+}
 
-/*style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;; margin: 3%; border-radius: 1.4em;*/
+.language-links:hover{
+    color: var(--yellow);
+    animation-name: right-after-hover
+}
+
+.socials-wrapper{
+   width: 100%;
+   margin-top: 10px;
+}
+
+.socials{
+    width: 35px
+ }
+
+#github-social{
+    width: 25px;
+    margin-left: 1%;
+}
+
+.divider{
+    min-height:.6em;
+    background-color: var(--white);
+}
+
+#download-text{
+    background-color: var(--backdropGrey);
+    color: var(--white);
+    font-size: 3em;
+    font-family: "Roboto Condensed";
+    
+}
+
+#download-buttons{
+    background-color: var(--yellow);
+    border-radius: 3em;
+    margin-left: -20px;
+    }
+
+#win{
+    padding-top: 4%;
+    width: 80%;
+}
+
+#mac{
+    
+    width: 70%;
+}
+
+.doc-language{
+    color: var(--yellow)!important;
+}
+
+.doc-language:hover{
+    color: var(--red)!important;
+}
+
+#description-wrapper{
+    margin-right: 6%;
+}
+
+#next-button-wrapper{
+    margin-left: -80px;
+}
+
+@keyframes right-after-hover{
+    /*TODO:*/
+}

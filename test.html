@@ -4,7 +4,7 @@
     <head>
         <title>buoy</title>
         <meta encode="utf-8"/>
-        <link rel="icon" href="images/icon.ico"> <!--TODO: Update higher res-->
+        <link rel="icon" href="images/icon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--CSS-->
         <link href="teststyles.css" rel = "stylesheet">
@@ -15,51 +15,151 @@
 
     <body>
         <div id="background-wrapper" class="container-fluid">
+
             <div class="row sticky-top">
-                <div class="col-1 border"></div>
-                <div class="col-3 border">
-                    <div class="row mt-2">
-                        <div class="col-9 border">
-                            <div class="row">
-                                
-                            </div>
+                <div class="col-1">
+                    <div class="row mt-4 mx-3">
+                        <div class="col-63">
+                            <svg width="88" height="8" viewBox="0 0 88 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="4" x2="88" y2="4" stroke="#FAFAFA" stroke-width="8"/>
+                            </svg>                               
                         </div>
-                        <div class="col-3 border"><a href="#"><img src="images\buoy_icon_v2_1024.png" width="100%" alt=""></a></div>
+                        <div class="col-7"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div id="en-button" class="col-10 language-links doc-language"><a onclick="switchLang('en')">english</a></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div id="ru-button" class="col-10 language-links"><a onclick="switchLang('ru')">русский</a></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div id="de-button" class="col-10 language-links"><a onclick="switchLang('de')">deutsch</a></div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div id="fr-button" class="col-10 language-links"><a onclick="switchLang('fr')">français</a> </div>
+                        <div class="col-2"></div>
                     </div>
                 </div>
-                <div class="col-6 border"></div>
-                <div class="col-2 border"></div>
+                <!--LOGO-->
+                <div class="col-4">
+                    <div class="row my-3">
+                        <div class="col-1 mx-4"></div>
+                        <div id="logo-container" class="col-8 my-1">
+                            <div class="row h-100">
+                                <div class="col-7"><div id="logotype">buoy</div></div>
+                                <div class="col-4"></div>
+                                <div class="col-1"></div>
+                            </div>
+                        </div>
+                        <div id="buoy-logo-img" class="col-3 px-0"><a href="#"><img src="images\buoy_icon_v2_1024.png" width="150px" alt=""></a></div>
+                    </div>
+                </div>
+                <!--------->
+                <div class="col-3"></div>
+                <!--DOWNLOAD-->
+                <div class="col-3">
+                    <div class="row my-5">
+                        <div class="col-8 text-end p-0 m-0">
+                            <span id="download-text">DOWNLOAD&nbsp;&nbsp;</span>
+                        </div>
+                        <div id="download-buttons" class="col-4">
+                            <div class="row h-100 align-items-center">
+                                
+                                <div class="col-6 text-end"><img id="win" src="images/Vector.svg"></img></div>
+                                <div class="col-6 text-start"><img id="mac" src="images/Apple_logo_black.svg"></img></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------->
+                <div class="col-1"></div>
             </div>
             
-            <div class="row align-items-center mt-4">
-                <div class="col-2 border"></div>
-                <div class="col-7 border">
+            
+            <div class="row mt-4">
+                <!--SOCIALS-->
+                <div class="col-2">
+                    <div class="row mx-2">
+                        <div class="col-6 language-links  px-2">
+                            <a href="#"><img width="70" src="images/twitter.png"></img></a>
+                        </div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="col-6 language-links  px-3">
+                            <a href="#"><img width="55" src="images/github.png"></img></a>
+                        </div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row mx-2">
+                        <div class="col-6 language-links  px-2">
+                            <a href="#"><img width="70" src="images/mail.png"></img></a>
+                        </div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row pt-5 mx-3">
+                        <div class="col-6 language-links"><a id="about" href="#">about</a></div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div class="col-6 language-links "><a id="privacy" href="#">privacy</a></div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div class="col-6 language-links"><a id="licence" href="#">licence</a></div>
+                        <div class="col-6"></div>
+                    </div>
+                    <div class="row mx-3">
+                        <div class="col-6">
+                            <svg width="88" height="8" viewBox="0 0 88 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <line y1="4" x2="88" y2="4" stroke="#FAFAFA" stroke-width="8"/>
+                            </svg>       
+                        </div>
+                        <div class="col-6"></div>
+                    </div>
+                </div>
+                <!--------->
+                <!--ANIMATION CANVAS-->
+                <div class="col-7">
                     <canvas id="animation-canvas" width="1096" height="800"></canvas> 
                 </div>
-                <div class="col border">
-                    <a id="next-step" onClick="next()">
-                        <svg id="play-arrow-wrapper" width="73" height="127" viewBox="0 0 73 127" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path id="next-arrow" class="" d="M13 13L60 63.5L13 114" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path id="replay-arrow" class="d-none" d="M60 114L13 63.5L60 13" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
+                <!-------->
+                <!--NEXT BUTTON-->
+                <div id="next-button-wrapper" class="col">
+                    <div class="row h-100 align-items-center">
+                        <a id="next-step" onClick="next()">
+                            <svg id="play-arrow-wrapper" width="73" height="127" viewBox="0 0 73 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="next-arrow" class="" d="M13 13L60 63.5L13 114" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path id="replay-arrow" class="d-none" d="M60 114L13 63.5L60 13" stroke="#DBDB93" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-2 border">
-                    
+                <!-------->
+                <!--DESCRIPTIONRIGHT-->
+                <div id="description-wrapper" class="col-2">
+                    <div class="row h-100 align-items-center">
+                        <div id="timestamp-wrapper" class="col-12 text-center"><span id="timestamp"></span></div>
+                    </div>
                 </div>
+                <!-------->
             </div>
-
-            <div class="row">
+            <!--DESCRIPTIONSUB-->
+            <!-- <div class="row">
                 <div class="col-2"></div>
                 <div class="col-7"><div id="timestamp-wrapper" class="text-end"><span id="timestamp"></span></div>
                 <div class="col"></div>
                 <div class="col-2 "></div>
-            </div>
+            </div> -->
+
         </div>
 
         <!--JS-->
         <script src="https://unpkg.com/rive-js"></script>
-        <script src="timestamps.js"></script>
+        <script src="data.js"></script>
         <script src="showcase.js"></script>
         
     </body>

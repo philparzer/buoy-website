@@ -12,7 +12,17 @@ const SHOWCASE_ANIM = new rive.Rive({
 const SHOWCASE_INFO = document.getElementById("timestamp");
 const NEXT_STEP_BTN = document.getElementById("next-step");
 const NEXT_STEP_BTN_SVG = document.getElementById("next-arrow");
-const REPLAY_BTN_SVG = document.getElementById("replay-arrow")
+const REPLAY_BTN_SVG = document.getElementById("replay-arrow");
+const EN_BTN = document.getElementById("en-button");
+const RU_BTN = document.getElementById("ru-button");
+const DE_BTN = document.getElementById("de-button");
+const FR_BTN = document.getElementById("fr-button");
+const ABOUT = document.getElementById("about");
+const PRIVACY = document.getElementById("privacy");
+const LICENCE = document.getElementById("licence");
+const LANG_BTNS = [EN_BTN, RU_BTN, DE_BTN, FR_BTN]
+const TEXT_ELES = [ABOUT, PRIVACY, LICENCE /*TODO: download + hrefs*/ ]
+
 //globals
 var iterations = 0;
 var animationToPlay = "";
@@ -20,7 +30,7 @@ var timeStampArr = [];
 var nextButtonStatus = true;
 
 //platform check
-var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0; //button that lets user switch to mac?
 
 if (isMac) {
     animationToPlay = "showcaseMAC";
@@ -54,8 +64,8 @@ const toggleNextBtn = () => {
 const playNextStep = () => {
     
     toggleNextBtn();
-
-    SHOWCASE_INFO.textContent = timeStampArr[iterations].textEN; //TODO: get language that corresponds with elementNodeReference.lang
+    console.log(document.documentElement.lang)
+    SHOWCASE_INFO.textContent = timeStampArr[iterations][document.documentElement.lang]; //TODO: get language that corresponds with elementNodeReference.lang
     SHOWCASE_ANIM.play(animationToPlay);
     
     setTimeout(() => {
@@ -97,3 +107,45 @@ function next() {
 
 //initial call to display animation's first frame (instead of weird static image / thumbnail) on load
 SHOWCASE_ANIM.scrub(animationToPlay, .5)
+
+
+const switchButton = (langparam) => {
+
+    
+    LANG_BTNS.forEach(element => element.classList = "col-10 language-links")
+    
+    switch(langparam)
+    {
+        case 'en':
+            EN_BTN.classList = "col-10 language-links doc-language";
+            break;
+        case 'ru':
+            RU_BTN.classList = "col-10 language-links doc-language";
+            break;
+        case 'de':
+            DE_BTN.classList = "col-10 language-links doc-language";
+            break;
+        case 'fr':
+            FR_BTN.classList = "col-10 language-links doc-language";
+            break;
+        default: 
+            console.log("language error")
+    }
+}
+
+const switchText = (langparam) => {
+    TEXT_ELES.forEach(element => {
+        element.textContent = TEXT_HREFS[element.id][langparam][0];
+        /*href of element = TEXT_HREFS[element.id][langparam][1];*/
+    })
+}
+
+const switchLang = (langparam) => {
+    
+    document.documentElement.setAttribute('lang', langparam);
+
+    switchButton(langparam);
+    switchText(langparam);
+
+
+}
