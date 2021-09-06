@@ -73,6 +73,7 @@ a {
 }
 
 .language-links{
+    cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
@@ -83,7 +84,9 @@ a {
 
 .language-links:hover{
     color: var(--yellow);
-    animation-name: right-after-hover
+    /*animation-name: right-after-hover*/
+
+    
 }
 
 .socials-wrapper{
@@ -116,16 +119,15 @@ a {
 #download-buttons{
     background-color: var(--yellow);
     border-radius: 3em;
-    margin-left: -20px;
+    margin-left: -1em;
     }
 
 #win{
-    padding-top: 4%;
-    width: 70%;
+
 }
 
-#mac{ 
-    width: 63%;
+#mac{
+
 }
 
 .doc-language{
@@ -143,6 +145,11 @@ a {
 #next-button-wrapper{
     margin-left: -80px;
 }
+
+#next-arrow:hover {
+    stroke: var(--red);
+}
+
 
 @keyframes right-after-hover{
     /*TODO:*/
