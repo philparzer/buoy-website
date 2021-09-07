@@ -84,9 +84,9 @@ a {
 
 .language-links:hover{
     color: var(--yellow);
-    /*animation-name: right-after-hover*/
-
-    
+    animation-name: right-after-hover;
+    animation-duration: 10s;
+    position: relative;
 }
 
 .socials-wrapper{
@@ -131,11 +131,13 @@ a {
 }
 
 .doc-language{
-    color: var(--yellow)!important;
+    color: var(--red)!important;
 }
 
 .doc-language:hover{
     color: var(--red)!important;
+    animation: none!important;
+    cursor: not-allowed;
 }
 
 #description-wrapper{
@@ -146,11 +148,20 @@ a {
     margin-left: -80px;
 }
 
+#next-button-wrapper{
+    margin-left: -5%;
+}
+
 #next-arrow:hover {
     stroke: var(--red);
 }
 
 
 @keyframes right-after-hover{
-    /*TODO:*/
+    
+    0% {left: 0%;}
+    3% {left: 4%;}
+    50% {left: 4%;}
+    75% {left: 4%;}
+    100% {left: 4%;}
 }
