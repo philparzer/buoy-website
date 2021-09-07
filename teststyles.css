@@ -88,7 +88,7 @@ a {
 #timestamp-small{
     
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.5em!important;
+    font-size: 1.8em!important;
     background-color: var(--white);
     
 }
@@ -187,7 +187,7 @@ a {
 
 #offcanvas-burger{
     max-width: 50%;
-    max-height: 85%;
+    max-height: 90%;
     border-radius: 0 0 15px 0;
     background-color: var(--backdropGrey);
 }
