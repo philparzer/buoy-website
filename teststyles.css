@@ -37,6 +37,13 @@ a {
     border-radius: 1.4em;
 }
 
+#animation-canvas-small{
+    margin-top: 1em;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 1.25em 2em;
+    border-radius: 1.4em;
+}
+
 
 #logo-container{
     background-color: var(--backdropGrey)!important;
@@ -64,6 +71,11 @@ a {
     width:90%;
 }
 
+
+#timestamp-wrapper-small{
+    width:100%;
+}
+
 #timestamp{
     
     font-family: 'Roboto Condensed', sans-serif;
@@ -71,6 +83,16 @@ a {
     background-color: var(--white);
     
 }
+
+
+#timestamp-small{
+    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+    background-color: var(--white);
+    
+}
+
 
 .language-links{
     cursor: pointer;
@@ -85,7 +107,7 @@ a {
 .language-links:hover{
     color: var(--yellow);
     animation-name: right-after-hover;
-    animation-duration: 10s;
+    animation-duration: 5s;
     position: relative;
 }
 
@@ -122,16 +144,9 @@ a {
     margin-left: -1em;
     }
 
-#win{
-
-}
-
-#mac{
-
-}
 
 .doc-language{
-    color: var(--red)!important;
+    color: var(--yellow)!important;
 }
 
 .doc-language:hover{
@@ -156,6 +171,26 @@ a {
     stroke: var(--red);
 }
 
+#download-text-small{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    background-color: var(--yellow);
+}
+
+.burger-rect{
+    fill: var(--white);
+}
+
+.burger-close-rect{
+    fill: var(--red);
+}
+
+#offcanvas-burger{
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 0 0 15px 0;
+    background-color: var(--backdropGrey);
+}
 
 @keyframes right-after-hover{
     
@@ -163,5 +198,5 @@ a {
     3% {left: 4%;}
     50% {left: 4%;}
     75% {left: 4%;}
-    100% {left: 4%;}
+    100% {left: 0%;}
 }

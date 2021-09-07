@@ -9,15 +9,19 @@ const switchButton = (langparam) => {
     {
         case 'en':
             EN_BTN.classList = "col-10 language-links doc-language";
+            EN_BTN_SMALL.classList = "col-10 language-links doc-language";
             break;
         case 'ru':
             RU_BTN.classList = "col-10 language-links doc-language";
+            RU_BTN_SMALL.classList = "col-10 language-links doc-language";
             break;
         case 'de':
             DE_BTN.classList = "col-10 language-links doc-language";
+            DE_BTN_SMALL.classList = "col-10 language-links doc-language";
             break;
         case 'fr':
             FR_BTN.classList = "col-10 language-links doc-language";
+            FR_BTN_SMALL.classList = "col-10 language-links doc-language";
             break;
         default: 
             console.log("language error")
