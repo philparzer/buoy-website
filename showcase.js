@@ -62,20 +62,38 @@ else {
     timeStampArr = TIMESTAMPS_WIN;
 }
 
+console.log(animationToPlay)
+
 const toggleNextBtn = () => {
     
     nextButtonStatus = !nextButtonStatus;
-    NEXT_STEP_BTN.disabled = nextButtonStatus;
+    try {NEXT_STEP_BTN.disabled = nextButtonStatus;} catch{}
+    try {NEXT_STEP_BTN_SMALL.disabled = nextButtonStatus;} catch{}
 
     if (nextButtonStatus){
-        NEXT_STEP_BTN_SVG.setAttribute("stroke", "#DBDB93") //TODO: maybe use fade css class
-        NEXT_STEP_BTN_SVG.style.cursor = "pointer";
+        try {
+            NEXT_STEP_BTN_SVG.setAttribute("stroke", "#DBDB93");
+            NEXT_STEP_BTN_SVG.style.cursor = "pointer";
+        }
+        catch{}
+        try {
+            NEXT_STEP_BTN_SVG_SMALL.setAttribute("stroke", "#DBDB93");
+            NEXT_STEP_BTN_SVG_SMALL.style.cursor = "pointer";
+        }
+        catch{}
+
     }
 
     else {
-
-        NEXT_STEP_BTN_SVG.setAttribute("stroke", "#DBA993"); //TODO: maybe use fade css class
-        NEXT_STEP_BTN_SVG.style.cursor = "not-allowed";
+        try {
+            NEXT_STEP_BTN_SVG.setAttribute("stroke", "#DBA993");
+            NEXT_STEP_BTN_SVG.style.cursor = "not-allowed";
+        } catch{}
+        try {
+            NEXT_STEP_BTN_SVG_SMALL.setAttribute("stroke", "#DBA993");
+            NEXT_STEP_BTN_SVG_SMALL.style.cursor = "not-allowed";
+        }catch{}
+        
     }
 
 }
@@ -95,12 +113,16 @@ const playNextStep = () => {
         SHOWCASE_ANIM.pause(animationToPlay);
         SHOWCASE_ANIM_SMALL.pause(animationToPlay); 
         iterations++; 
-        NEXT_STEP_BTN.disabled = false;
+        try{NEXT_STEP_BTN.disabled = false;} catch{}
+        try{NEXT_STEP_BTN_SMALL.disabled =false;} catch{}
     },  timeStampArr[iterations].time)
 }
 
 //handles next btn input and disable
 function next() {
+
+    document.getElementById("play-arrow-wrapper-small").classList ="";
+    document.getElementById("play-arrow-wrapper").classList ="";
 
     if (!SHOWCASE_ANIM.isPlaying && iterations < timeStampArr.length)
     {
@@ -109,16 +131,20 @@ function next() {
         //style for replay
         if (iterations >= timeStampArr.length-1) 
         {
-            NEXT_STEP_BTN_SVG.classList = "d-none";
+            try{NEXT_STEP_BTN_SVG.classList = "d-none";} catch{}
+            try {NEXT_STEP_BTN_SVG_SMALL.classList ="d-none";} catch{}
             REPLAY_BTN_SVG.classList = "";
+            REPLAY_BTN_SVG_SMALL.classList = "";
         }
     }
 
     else if (iterations >= timeStampArr.length)
     {   
         //unstyle replay
-        NEXT_STEP_BTN_SVG.classList = "";
-        REPLAY_BTN_SVG.classList = "d-none";
+        try {NEXT_STEP_BTN_SVG.classList = "";} catch{}
+        try {NEXT_STEP_BTN_SVG_SMALL.classList = "";} catch{}
+        try {REPLAY_BTN_SVG.classList = "d-none";}catch{}
+        try {REPLAY_BTN_SVG_SMALL.classList = "d-none";}catch{}
         //reset animation
         iterations = 0;
         SHOWCASE_ANIM.scrub(animationToPlay, .5);
