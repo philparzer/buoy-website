@@ -88,7 +88,7 @@ a {
 #timestamp-small{
     
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 40px;
+    font-size: 2em;
     background-color: var(--white);
     
 }
