@@ -3,6 +3,11 @@
 
 /*current media query 2560x1440 TODO:queries*/
 
+html, body {
+    height: 100%!important;
+    background-color: var(--darkerGrey);
+    }
+
 :root{
     --yellow: #DBDB93;
     --red: #DBA993;
@@ -98,7 +103,7 @@ a {
     cursor: pointer;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.8em;
     line-height: .99em;
     color: var(--white);
     padding: .1em;
@@ -164,7 +169,7 @@ a {
 }
 
 #next-button-wrapper{
-    margin-left: -5%;
+    margin-left: -6%;
 }
 
 #next-arrow:hover {
@@ -187,7 +192,7 @@ a {
 
 #offcanvas-burger{
     max-width: 50%;
-    max-height: 90%;
+    max-height: 60%;
     border-radius: 0 0 15px 0;
     background-color: var(--backdropGrey);
 }
@@ -212,6 +217,24 @@ a {
     animation-duration: 2s;
 }
 
+.mobile-dwnld{
+    font-family: "Roboto";
+    color: var(--backdropGrey)!important;
+    font-size: 1.2em;
+}
+
+.mobile-dwnld:hover{
+    color: var(--red)!important;
+    font-size: 1.2em;
+}
+
+#offcanvas-lang{
+    max-width: 50%;
+    max-height: 60%;
+    border-radius: 0 0 0 15px;
+    background-color: var(--backdropGrey);
+}
+
 @keyframes next-button-small-click-me{
      0% {width: 64px;  height: 35px;}
     50% {width: 70px;  height: 38px;}
@@ -233,3 +256,5 @@ a {
     75% {left: 4%;}
     100% {left: 0%;}
 }
+
+

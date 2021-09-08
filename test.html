@@ -19,7 +19,7 @@
             <div class="row sticky-top">
 
                 <!--MOBILE-->
-                <div class="col-2 d-block d-lg-none mt-3">
+                <div class="col-4 d-block d-lg-none pt-3">
                     <a class="" data-bs-toggle="offcanvas" href="#offcanvas-burger" role="button" aria-controls="offcanvasExample">
                         <svg viewBox="0 0 100 80" width="40" height="40">
                             <rect class="burger-rect" width="100" height="22"></rect>
@@ -30,30 +30,6 @@
                     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas-burger" aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-body">
                       <div>
-                        <div class="row mt-4 mx-3">
-                            <div class="col">
-                                <svg width="88" height="8" viewBox="0 0 88 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <line y1="4" x2="88" y2="4" stroke="#FAFAFA" stroke-width="8"/>
-                                </svg>                               
-                            </div>
-                            <div class="col-7"></div>
-                        </div>
-                        <div class="row mx-3">
-                            <div id="en-button-small" class="col-10 language-links doc-language"><a id="en-text-small" onclick="switchLang('en')">english</a></div>
-                            <div class="col-2"></div>
-                        </div>
-                        <div class="row mx-3">
-                            <div id="ru-button-small" class="col-10 language-links"><a id="ru-text-small" onclick="switchLang('ru')">русский</a></div>
-                            <div class="col-2"></div>
-                        </div>
-                        <div class="row mx-3">
-                            <div id="de-button-small" class="col-10 language-links"><a id="de-text-small" onclick="switchLang('de')">deutsch</a></div>
-                            <div class="col-2"></div>
-                        </div>
-                        <div class="row mx-3">
-                            <div id="fr-button-small" class="col-10 language-links"><a id="fr-text-small" onclick="switchLang('fr')">français</a> </div>
-                            <div class="col-2"></div>
-                        </div>
                         <div class="row mx-2 pt-3">
                             <div class="col-6 language-links  px-2">
                                 <a href="https://twitter.com/buoy_app" target="_blank"><img width="50" src="images/twitter.png"></img></a>
@@ -93,13 +69,50 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-4 d-block d-lg-none mt-3"></div>
-                <div class="col-6 d-block d-lg-none mt-2">
+                <div class="col-5 col-md-5 d-block d-lg-none pt-2 text-center">
                     <img src="images/logo_small.svg" width="100%"></img>
                 </div>
+                <div class="col-3 d-block d-lg-none pt-3 text-end">
+                    <a class="text-start" data-bs-toggle="offcanvas" href="#offcanvas-lang" role="button" aria-controls="offcanvasExample">
+                        <img src="images/gateway.svg" viewBox="0 0 100 80" width="53" height="53"></img>
+                    </a>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-lang" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-body ">
+                      <div>
+                        
+                        <div class="row mt-4 mx-3">
+                            <div class="col-12 border">
+                                <svg width="88" height="8" viewBox="0 0 88 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line y1="4" x2="88" y2="4" stroke="#FAFAFA" stroke-width="8"/>
+                                </svg>                               
+                            </div>
+                            
+                        </div>
+                        <div class="row mx-3">
+                            <div id="en-button-small" class="col-12 language-links doc-language"><a id="en-text-small" onclick="switchLang('en')">english</a></div>
+                            
+                        </div>
+                        <div class="row mx-3">
+                            <div id="ru-button-small" class="col-12 language-links"><a id="ru-text-small" onclick="switchLang('ru')">русский</a></div>
+                            
+                        </div>
+                        <div class="row mx-3">
+                            <div id="de-button-small" class="col-12 language-links"><a id="de-text-small" onclick="switchLang('de')">deutsch</a></div>
+                           
+                        </div>
+                        <div class="row mx-3">
+                            <div id="fr-button-small" class="col-12 language-links"><a id="fr-text-small" onclick="switchLang('fr')">français</a> </div>
+                            
+                        </div>
+
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                
                 <!------------>
 
-                <div class="col-1 d-none d-lg-block">
+                <div class="col-2 d-none d-lg-block">
                     <div class="row mt-4 mx-3">
                         <div class="col-63">
                             <svg width="88" height="8" viewBox="0 0 88 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -126,8 +139,8 @@
                     </div>
                 </div>
                 <!--LOGO-->
-                <div class="col-4 d-none d-lg-block">
-                    <div class="row my-3">
+                <div class="col-3 d-none d-lg-block mt-3">
+                    <!-- <div class="row my-3">
                         <div class="col-1 mx-4"></div>
                         <div id="logo-container" class="col-6 my-1">
                             <div class="row h-100">
@@ -137,17 +150,18 @@
                             </div>
                         </div>
                         <div id="buoy-logo-img" class="col-5 px-0"><a href="#"><img src="images\buoy_icon_v2_1024.png" width="150px" alt=""></a></div>
-                    </div>
+                    </div> -->
+                    <img src="images/logo-big.svg"></img>
                 </div>
                 <!--------->
                 <div class="col-3 d-none d-lg-block"></div>
                 <!--DOWNLOAD-->
                 <div class="col-3 d-none d-lg-block">
                     <div class="row my-5">
-                        <div class="col-8 text-end p-0 m-0">
+                        <div class="col-xxl-8 d-none d-xxl-block text-end p-0 m-0">
                             <span id="download-text">DOWNLOAD&nbsp;&nbsp;</span>
                         </div>
-                        <div id="download-buttons" class="col-4">
+                        <div id="download-buttons" class="col-12 col-xxl-4">
                             <div class="row h-100 align-items-center">
                                 <div class="col-6 text-end"><img width="48px" id="win" src="images/Vector.svg"></img></div>
                                 <div class="col-6 text-start"><img width="40px" id="mac" src="images/Apple_logo_black.svg"></img></div>
@@ -204,13 +218,15 @@
                 </div>
                 <!--------->
                 <!--ANIMATION CANVAS-->
-                <div class="col-md-7 d-none d-lg-block">
+                <div class="col-7 d-none d-lg-block">
                     <canvas id="animation-canvas" width="1096" height="800"></canvas> 
                 </div>
                 <!--MOBILE CANVAS-->
-                <div class="col-12 d-block d-lg-none mb-2">
+                <div class="col-md-3 d-none d-md-block d-lg-none"></div>
+                <div class="col-12 col-md-6 d-block d-lg-none mb-2">
                     <canvas id="animation-canvas-small" width="1096" height="800"></canvas> 
                 </div>
+                <div class="col-md-3 d-none d-md-block d-lg-none"></div>
                 <!-------->
                 <!--NEXT BUTTON-->
                 <div id="next-button-wrapper" class="col d-none d-lg-block">
@@ -236,7 +252,7 @@
                 </div>
                 <!-------->
                 <!--DESCRIPTIONRIGHT-->
-                <div id="description-wrapper" class="col-2 d-none d-lg-block">
+                <div id="description-wrapper" class="col-2 col-lg d-none d-lg-block">
                     <div class="row h-100 align-items-center">
                         <div id="timestamp-wrapper" class="col-12 text-center"><span id="timestamp">buoy helps you focus</span></div>
                     </div>
@@ -252,7 +268,7 @@
             </div>
 
                     <div id="download-small-wrapper" class="row d-block d-lg-none fixed-bottom">
-                        <div class="col text-center"><span id="download-text-small">out on windows and mac</span> </div>
+                        <div class="col text-center"><span id="download-text-small">out on <a class="mobile-dwnld" href="#">windows</a> and <a class="mobile-dwnld"href="#">mac</a></span> </div>
                     </div>
 
         </div>
