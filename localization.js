@@ -1,4 +1,5 @@
 //handles localization on button click
+//TODO: deprecated?
 
 const switchButton = (langparam) => {
 
