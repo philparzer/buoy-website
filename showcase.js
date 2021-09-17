@@ -41,7 +41,7 @@ const ABOUT = document.getElementById("about");
 const PRIVACY = document.getElementById("privacy");
 const LICENCE = document.getElementById("licence");
 const LANG_BTNS = [EN_BTN, RU_BTN, DE_BTN, FR_BTN, EN_BTN_SMALL, RU_BTN_SMALL, DE_BTN_SMALL,FR_BTN_SMALL]
-const TEXT_ELES = [ABOUT, PRIVACY, LICENCE /*TODO: download + hrefs*/ ]
+const TEXT_ELES = [ABOUT, PRIVACY, LICENCE]
 
 //globals
 var iterations = 0;
