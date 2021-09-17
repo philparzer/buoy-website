@@ -36,6 +36,29 @@ a {
     cursor: pointer;
 }
 
+.about-text{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1.2em;
+    color: var(--white);
+    padding: .1em;
+}
+
+.creator-link{
+    color: var(--red)!important;
+}
+
+.creator-link:hover{
+    color: var(--yellow)!important;
+}
+
+.about-headline{
+    color: var(--yellow);
+    font-size: 1.5em;
+    letter-spacing: -.04em;
+}
+
 #animation-canvas{ 
     width: 90%;
     box-shadow: rgba(0, 0, 0, 0.35) 0 1.25em 2em;
@@ -232,7 +255,7 @@ a {
 
 #offcanvas-lang{
     max-width: 50%;
-    max-height: 25%;
+    max-height: 60%;
     border-radius: 0 0 0 15px;
     background-color: var(--backdropGrey);
 }
