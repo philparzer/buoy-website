@@ -226,7 +226,7 @@ a {
 
 #offcanvas-burger{
     max-width: 50%;
-    max-height: 60%;
+    max-height: 70%;
     border-radius: 0 0 15px 0;
     background-color: var(--backdropGrey);
 }
@@ -264,7 +264,7 @@ a {
 
 #offcanvas-lang{
     max-width: 50%;
-    max-height: 60%;
+    max-height: 70%;
     border-radius: 0 0 0 15px;
     background-color: var(--backdropGrey);
 }
