@@ -11,15 +11,15 @@
         <meta encode="utf-8"/>
 
         <link rel="alternate" hreflang="en"
-            href="https://buoy-productivity.com" />
+            href="https://buoy-productivity.com/about" />
         <link rel="alternate" hreflang="de"
-            href="https://buoy-productivity.com/de/"/>
+            href="https://buoy-productivity.com/de/ueber-uns"/>
          <link rel="alternate" hreflang="fr"
-            href="https://buoy-productivity.com/fr/" />
+            href="https://buoy-productivity.com/fr/en-savoir-plus" />
          <link rel="alternate" hreflang="ru"
-            href="https://buoy-productivity.com/ru/" />
+            href="https://buoy-productivity.com/ru/o-seti" />
          <link rel="alternate" hreflang="x-default"
-            href="https://buoy-productivity.com" />
+            href="https://buoy-productivity.com/about" />
         
 
 
@@ -106,13 +106,13 @@
                             <div id="en-button-small" class="col-10 language-links doc-language"><a id="en-text-small" href="#">english</a></div>
                         </div>
                         <div class="row mx-3 pt-2">
-                            <div id="ru-button-small" class="col-10 language-links"><a id="ru-text-small" href="/ru/">русский</a></div>
+                            <div id="ru-button-small" class="col-10 language-links"><a id="ru-text-small" href="../ru/o-seti/">русский</a></div>
                         </div>
                         <div class="row mx-3 pt-2">
-                            <div id="de-button-small" class="col-10 language-links"><a id="de-text-small" href="/de/">deutsch</a></div>
+                            <div id="de-button-small" class="col-10 language-links"><a id="de-text-small" href="../de/ueber-uns/">deutsch</a></div>
                         </div>
                         <div class="row mx-3 pt-2">
-                            <div id="fr-button-small" class="col-10 language-links"><a id="fr-text-small" href="/fr/">français</a> </div>
+                            <div id="fr-button-small" class="col-10 language-links"><a id="fr-text-small" href="../fr/en-savoir-plus/">français</a> </div>
                         </div>
 
                       </div>
@@ -136,15 +136,15 @@
                         <div class="col-2"></div>
                     </div>
                     <div class="row mx-3">
-                        <div id="ru-button" class="col-10 language-links"><a href="/ru/">русский</a></div>
+                        <div id="ru-button" class="col-10 language-links"><a href="../ru/o-seti/">русский</a></div>
                         <div class="col-2"></div>
                     </div>
                     <div class="row mx-3">
-                        <div id="de-button" class="col-10 language-links"><a href="/de/" >deutsch</a></div>
+                        <div id="de-button" class="col-10 language-links"><a href="../de/ueber-uns/" >deutsch</a></div>
                         <div class="col-2"></div>
                     </div>
                     <div class="row mx-3">
-                        <div id="fr-button" class="col-10 language-links"><a href="/fr/">français</a> </div>
+                        <div id="fr-button" class="col-10 language-links"><a href="../fr/en-savoir-plus/">français</a> </div>
                         <div class="col-2"></div>
                     </div>
                 </div>
@@ -164,8 +164,8 @@
                         </div>
                         <div id="download-buttons" class="col-12 col-xxl-4">
                             <div class="row h-100 align-items-center">
-                                <div class="col-6 text-end"><a href="../download/buoy_beta_0.2.7z" download><img width="48px" id="win" src="../images/Vector.svg"></img></a></div>
-                                <div class="col-6 text-start"><img width="40px" id="mac" src="../images/Apple_logo_black.svg"></img></div>
+                                <div class="col-6 text-end"><a href="../download/buoy_beta_0.2.7z" download><img width="48px" id="win" onmouseover="highlight(true)" onmouseout="highlight(false)" src="../images/Vector.svg"></img></a></div>
+                                <div class="col-6 text-start"><a title="soon" class="not-ready"><img width="40px" id="mac" src="../images/Apple_logo_black.svg"></img></a></div> <!--TODO: replace with download link-->
                             </div>
                         </div>
                     </div>
@@ -261,29 +261,34 @@
 
         </div>
 
+
+        <!--JS-->
+        <script>
+            const highlight = (mouseOver) => {
+                if (mouseOver){document.getElementById("download-text").style.color = "#DBDB93"}
+                else {document.getElementById("download-text").style.color = "#FAFAFA"}
+            }
+        </script>
         <!--cookie banner-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <!-- Cookies -->
+        <script>
+        window.cookieconsent.initialise({
+            "palette": {
+            "popup": { "background": "#FAFAFA", "text": "black"},
+            "button": {"background": "#DBA993"}},
+            "theme": "classic",
+            "position": "bottom-right",
+            "content": {
+            "message": "We use cookies.",
+            "dismiss": "Got it!",
+            "link": "Learn more",
+            "href": "https://www.cookiesandyou.com/"
+            }
+        });
+        </script>
     
-    <!-- Cookies -->
-    <script>
-      window.cookieconsent.initialise({
-        "palette": {
-        "popup": { "background": "#FAFAFA", "text": "black"},
-        "button": {"background": "#DBA993"}},
-          "theme": "classic",
-          "position": "bottom-right",
-          "content": {
-          "message": "We use cookies.",
-          "dismiss": "Got it!",
-          "link": "Learn more",
-        "href": "https://www.cookiesandyou.com/"
-        }
-      });
-
-      
-    </script>
-
     
         
     </body>

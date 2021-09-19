@@ -159,9 +159,9 @@
                             <span id="download-text">DOWNLOAD&nbsp;&nbsp;&nbsp;</span>
                         </div>
                         <div id="download-buttons" class="col-12 col-xxl-4">
-                            <div class="row h-100 align-items-center">
-                                <div class="col-6 text-end"><a href="/download/buoy_beta_0.2.7z" download><img width="48px" id="win" src="images/Vector.svg"></img></a></div>
-                                <div class="col-6 text-start"><img width="40px" id="mac" src="images/Apple_logo_black.svg"></img></div>
+                            <div id="download-row" class="row h-100 align-items-center">
+                                <div class="col-6 text-end"><a href="/download/buoy_beta_0.2.7z" download><img width="48px" id="win" onmouseover="highlight(true)" onmouseout="highlight(false)" src="images/Vector.svg"></img></a></div>
+                                <div class="col-6 text-start"><a title="soon" class="not-ready"><img width="40px" id="mac" src="images/Apple_logo_black.svg"></img></a></div> <!--TODO: replace with download link-->
                             </div>
                         </div>
                     </div>
@@ -278,25 +278,30 @@
         <!--TODO: cookie banner-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-    
-    <!-- Cookies -->
-    <script>
-      window.cookieconsent.initialise({
-        "palette": {
-        "popup": { "background": "#FAFAFA", "text": "black"},
-        "button": {"background": "#DBA993"}},
-          "theme": "classic",
-          "position": "bottom-right",
-          "content": {
-          "message": "We use cookies.",
-          "dismiss": "Got it!",
-          "link": "Learn more",
-        "href": "https://www.cookiesandyou.com/"
-        }
-      });
+        <script>
+            const highlight = (mouseOver) => {
+                if (mouseOver){document.getElementById("download-text").style.color = "#DBDB93"}
+                else {document.getElementById("download-text").style.color = "#FAFAFA"}
+            }
+        </script>
+        <!-- Cookies -->
+        <script>
+        window.cookieconsent.initialise({
+            "palette": {
+            "popup": { "background": "#FAFAFA", "text": "black"},
+            "button": {"background": "#DBA993"}},
+            "theme": "classic",
+            "position": "bottom-right",
+            "content": {
+            "message": "We use cookies.",
+            "dismiss": "Got it!",
+            "link": "Learn more",
+            "href": "https://www.cookiesandyou.com/"
+            }
+        });
 
-      
-    </script>
+        
+        </script>
 
     
         

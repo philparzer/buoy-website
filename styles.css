@@ -292,3 +292,6 @@ a {
 }
 
 
+.not-ready:hover{ /*TODO: remove*/
+    cursor: not-allowed;
+}
